@@ -1,0 +1,29 @@
+{
+  "patients":[
+    {"dossier":1, "nom" : "Léger", "prenom": "Émile", "naissance": "26 mars 1917", "sex": "M"},
+    {"dossier":2, "nom" : "Bernard", "prenom": "Marie", "naissance": "3 février 1946", "sex": "F"},
+    {"dossier":3, "nom" : "Chartrand", "prenom": "Guy", "naissance": "5 avril 1959", "sex": "M"},
+    {"dossier":4, "nom" : "Coté", "prenom": "André", "naissance": "2 septembre 1978", "sex": "M"},
+    {"dossier":5, "nom" : "Lavoie", "prenom": "Carole", "naissance": "4 novembre 1973", "sex": "F"},
+    {"dossier":6, "nom" : "Martin", "prenom": "Diane", "naissance": "2 décembre 1965", "sex": "F"},
+    {"dossier":7, "nom" : "Lacroix", "prenom": "Pauline", "naissance": "25 janvier 1956", "sex": "F"},
+    {"dossier":8, "nom" : "St-Jean", "prenom": "Arthur", "naissance": "7 octobre 1912", "sex": "M"},
+    {"dossier":9, "nom" : "Béchard", "prenom": "Marc", "naissance": "8 aout 1980", "sex": "M"},
+    {"dossier":10, "nom" : "Chartrand", "prenom": "Mario", "naissance": "23 juillet 1947", "sex": "M"}
+  ],
+  "hospitalisations" : [
+    {"code etablissement":1234, "no dossier patient" : 5, "date admission": "14-août-00", "date sortie": "14-août-01", "specialite": "médecine"},
+    {"code etablissement":1234, "no dossier patient" : 10, "date admission": "12-déc-92", "date sortie": "12-déc-92", "specialite": "chirurgie"},
+    {"code etablissement":2346, "no dossier patient" : 8, "date admission": "05-mars-03", "date sortie": "05-mars-03", "specialite": "médecine"},
+    {"code etablissement":2346, "no dossier patient" : 1, "date admission": "11-nov-97", "date sortie": "12-nov-97", "specialite": "chirurgie"},
+    {"code etablissement":2346, "no dossier patient" : 3, "date admission": "12-avr-95", "date sortie": "30-avr-95", "specialite": "médecine"},
+    {"code etablissement":3980, "no dossier patient" : 5, "date admission": "14-févr-00", "date sortie": "14-mars-00", "specialite": "chirurgie"},
+    {"code etablissement":3980, "no dossier patient" : 5, "date admission": "01-janv-01", "date sortie": "01-févr-01", "specialite": "médecine"},
+    {"code etablissement":3980, "no dossier patient" : 9, "date admission": "03-avr-95", "date sortie": "08-avr-95", "specialite": "chirurgie"},
+    {"code etablissement":3980, "no dossier patient" : 7, "date admission": "27-nov-99", "date sortie": "04-déc-99", "specialite": "médecine"},
+    {"code etablissement":3980, "no dossier patient" : 10, "date admission": "28-avr-97", "date sortie": "05-mai-97", "specialite": "chirurgie"},
+    {"code etablissement":4177, "no dossier patient" : 3, "date admission": "03-août-01", "date sortie": "05-déc-01", "specialite": "médecine"},
+    {"code etablissement":4177, "no dossier patient" : 3, "date admission": "02-févr-02", "date sortie": "23-févr-02", "specialite": "chirurgie"},
+    {"code etablissement":7306, "no dossier patient" : 2, "date admission": "23-mai-98", "date sortie": "27-mai-98", "specialite": "chirurgie"}
+  ]
+}

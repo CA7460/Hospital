@@ -1,0 +1,76 @@
+/*--------------------------------------------------------------
+    Status
+--------------------------------------------------------------*/
+#statusBox
+{
+    margin-bottom: 20px;
+}
+
+.statusBox-erreur::placeholder
+{
+    color: #d67373 !important;
+    opacity: 1;
+}
+
+.statusBox-ok::placeholder
+{
+    color: #066392 !important;
+    opacity: 1;
+}
+
+/*--------------------------------------------------------------
+# Tableau
+--------------------------------------------------------------*/
+.styled-table {
+    border-collapse: collapse;
+    margin: 25px 0;
+    font-size: 0.9em;
+    font-family: sans-serif;
+    min-width: 400px;
+    box-shadow: 0 0 20px rgb(136, 174, 229);
+}
+
+#tab_ligneTitre{
+    background-color: #0688C9;
+    color: white;
+}
+
+.styled-table thead tr {
+    text-align: left;
+}
+
+.styled-table tbody tr {
+    border: 2px solid #e0dcdc;
+}
+
+.styled-table tbody tr:nth-of-type(odd) {
+    background-color: rgba(8, 169, 252, 0.3);
+}
+
+.styled-table tbody tr.active-row {
+    font-weight: bold;
+}
+
+.services-bg {
+    background-color: white;
+}
+/*--------------------------------------------------------------
+# Select
+--------------------------------------------------------------*/
+
+.icon-box-cliquee {
+    background-color: #1977cc;
+}
+
+.icon-box-cliquee h4 a span,
+.icon-box-cliquee p {
+    color: white;
+}
+
+/*--------------------------------------------------------------
+# End Select
+--------------------------------------------------------------*/
+#hero
+{
+    background: url("../img/home-bg-1.png") top center;
+}

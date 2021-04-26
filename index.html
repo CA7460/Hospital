@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Gestion des hospitalisation</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <script src="utilitaires/js/jquery-3.4.1.min.js"></script>
+  <script src="assets/js/requetes.js"></script>
+  <script src="assets/js/hospitalisations.js"></script>
+
+  <link rel="stylesheet" href="assets/css/style.css">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <!-- template CSS Files -->
+  <link href="utilitaires/template/animate.css/animate.min.css" rel="stylesheet">
+  <link href="utilitaires/template/fontawesome-free/css/all.min.css" rel="stylesheet">
+  <link href="utilitaires/template/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="utilitaires/template/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="utilitaires/css/style.css" rel="stylesheet">
+</head>
+
+<body onload="initialisation();">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top">
+    <div class="container d-flex align-items-center">
+
+      <h1 class="logo me-auto"><a href="index.html">Сentre médical</a></h1>
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+          <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
+          <li><a class="nav-link scrollto" href="#services">Services</a></li>
+          <li><a class="nav-link scrollto" href="#status">Status</a></li>
+          <li><a class="nav-link scrollto" href="#footer">Auteur</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+      <a href="#services" class="appointment-btn scrollto">Les services</a>
+
+    </div>
+  </header><!-- End Header -->
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="intro-box wow fadeInLeft" data-wow-dalay=".2s" style="visibility: visible; animation-name: fadeInLeft;">
+            <h1>Gestion des hospitalisation</h1>
+            <a href="#services" class="btn-get-started scrollto">Pour commencer</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <main id="main">
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services services-bg">
+      <div class="container">
+
+        <div class="section-title">
+          <h2>Services</h2>
+        </div>
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-lg-0" id="patients" onclick="focused('patients');">
+            <div class="icon-box" onclick="chargerDonnees('patients');">
+              <div class="icon"><i class="fas fa-hospital-user"></i></div>
+              <h4><a href="#contenu"><span>Liste des patients</span></a></h4>
+              <p>Chaque patient a un dossier médical informatique où toute l’information médicale de ce patient s’y retrouve</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch" id="hospitalisations" onclick="focused('hospitalisations');" >
+            <div class="icon-box" onclick="chargerDonnees('hospitalisations');">
+              <div class="icon"><i class="fas fa-heartbeat"></i></div>
+              <h4><a href="#contenu"><span>Liste des hospitalisations</span></a></h4>
+              <p>Le liste d'établissements, les cliniques, les centres hospitaliers universitaires, les centres de réadaptation</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 d-flex align-items-stretch mt-4 mt-md-0" id="hospitalisationsPatient2" onclick="focused('hospitalisationsPatient2');">
+            <div class="icon-box" onclick="chargerDonnees('hospitalisationsPatient');">
+              <div class="icon"><i class="fas fa-pills"></i></div>
+              <h4><a href="#contenu"><span>Hospitalisations par patient</span></a></h4>
+              <p>Les dossiers et les comptes rendus de consultation, d'intervention, d'exploration ou d'hospitalisation de patients</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section><!-- End Services Section -->
+
+    <!-- ======= Status Section ======= -->
+    <section id="appointment" class="appointment section-bg status-section">
+      <div class="container">
+
+        <div class="section-title" id="status">
+          <h2>Status</h2>
+
+          <div class="col-sm-6 mx-auto">
+            <input class="form-control" id="statusBox" type="text" placeholder="Сhoisissez un service" aria-label="readonly input example" readonly>
+          </div>
+
+          <div class="col-sm-6 mx-auto">
+           <div class="list-group" id="contenu2"></div>
+          </div>
+        </div>
+
+        <button id="btnClear" type="button" class="btn" onclick="clearData('contenu');">
+          <img src="assets/img/cancel.png" width="40px" height="40px"/>
+        </button>
+
+        <div class="container">
+           <div class="list-group" id="contenu"></div>
+        </div>
+
+      </div>
+    </section><!-- End Status Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+    <div class="container d-md-flex py-4">
+
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Crée par <strong><span>Yulia Khonyak</span></strong>
+        </div>
+        <div class="credits">
+             11 avril 2021 <a href="http://portfolio.vitgrid.com/#"><br><br>Visiter le site du portfolio</a>
+        </div>
+      </div>
+    </div>
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+   <script src="utilitaires/template/purecounter/purecounter.js"></script>
+  <!-- Template Main JS File -->
+  <script src="utilitaires/js/main.js"></script>
+
+</body>
+</html>
